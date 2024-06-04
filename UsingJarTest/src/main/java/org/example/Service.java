@@ -50,7 +50,8 @@ public class Service {
         JavaRDD<Row> transformedRDD = rdd.map(new Function<Row, Row>() {
             @Override
             public Row call(Row row) {
-                // Assuming columns are of type String, Integer, Double for this example
+
+                // 내부로직을 구현하는 대신 받은 인자 x,y를 column으로 추가합니다.
                 String a = row.getString(row.fieldIndex("a"));
                 int b = row.getInt(row.fieldIndex("b"));
                 double c = row.getDouble(row.fieldIndex("c"));
